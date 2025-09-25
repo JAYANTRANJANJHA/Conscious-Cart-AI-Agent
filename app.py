@@ -22,7 +22,7 @@ if "api_validated" not in st.session_state:
 @st.cache_resource(show_spinner=False)
 def load_llm(api_key):
     return ChatGoogleGenerativeAI(
-        model="models/gemini-1.5-flash-latest",
+       model="gemini-1.5-flash",
         temperature=0,
         google_api_key=api_key,
     )
@@ -108,6 +108,7 @@ if st.session_state.api_validated:
                 recommendation = generate_recommendation(impact)
                 st.markdown("### 📝 Final Recommendation")
                 st.markdown(recommendation)
+
 
 
 
