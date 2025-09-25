@@ -21,9 +21,9 @@ if "api_validated" not in st.session_state:
 # --- Function to Load LLM (only once) ---
 @st.cache_resource(show_spinner=False)
 def load_llm(api_key):
-    # Using the exact model name from the successful Jupyter Notebook
+    # Using a specific, versioned model ID from the documentation
     return ChatGoogleGenerativeAI(
-       model="models/gemini-1.5-flash-latest",
+       model="gemini-2.0-flash-001",
         temperature=0,
         google_api_key=api_key,
     )
