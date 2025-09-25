@@ -22,7 +22,7 @@ if "api_validated" not in st.session_state:
 @st.cache_resource(show_spinner=False)
 def load_llm(api_key):
     return ChatGoogleGenerativeAI(
-       model="gemini-pro", # <-- THIS LINE IS CHANGED
+       model="gemini-1.0-pro", # <-- THIS LINE IS CHANGED
         temperature=0,
         google_api_key=api_key,
     )
