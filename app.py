@@ -22,10 +22,10 @@ if "api_validated" not in st.session_state:
 @st.cache_resource(show_spinner=False)
 def load_llm(api_key):
     return ChatGoogleGenerativeAI(
-       model="gemini-pro", # Using a stable and widely available model
+       model="gemini-pro",
        google_api_key=api_key,
-       # Explicitly setting the API version to v1 to avoid v1beta issues
-       additional_kwargs={"api_version": "v1"} 
+       # Explicitly setting the transport to REST to avoid gRPC issues
+       transport="rest"
     )
 
 # --- API Key Input ---
