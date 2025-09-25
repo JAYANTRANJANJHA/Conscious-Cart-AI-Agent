@@ -11,7 +11,7 @@ st.write("by Code Craft")
 
 # --- Image ---
 image_url = "https://2stallions.com/wp-content/uploads/2025/02/fAefNcApO8TxHoEHlySiaigOFPu99Qq3mxqrhQ3hkSJgnPioA-out-0.jpg"  # insert the img u wanted
-st.image(image_url, caption="Conscious Cart AI", use_container_width=True)  
+st.image(image_url, caption="Conscious Cart AI", use_container_width=True)
 # --- Session State Initialization ---
 if "api_key" not in st.session_state:
     st.session_state.api_key = ""
@@ -22,7 +22,7 @@ if "api_validated" not in st.session_state:
 @st.cache_resource(show_spinner=False)
 def load_llm(api_key):
     return ChatGoogleGenerativeAI(
-       model="gemini-1.5-flash",
+       model="models/gemini-1.5-flash-latest", 
         temperature=0,
         google_api_key=api_key,
     )
@@ -108,9 +108,3 @@ if st.session_state.api_validated:
                 recommendation = generate_recommendation(impact)
                 st.markdown("### 📝 Final Recommendation")
                 st.markdown(recommendation)
-
-
-
-
-
-
