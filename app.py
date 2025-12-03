@@ -10,7 +10,7 @@ st.title("Conscious Cart AI Agent 🛒")
 st.write("by Code Craft")
 
 # --- Image ---
-image_url = "https://2stallions.com/wp-content/uploads/2025/02/fAefNcApO8TxHoEHlySiaigOFPu99Qq3mxqrhQ3hkSJgnPioA-out-0.jpg"  # insert the img u wanted
+image_url = "https://2stallions.com/wp-content/uploads/2025/02/fAefNcApO8TxHoEHlySiaigOFPu99Qq3mxqrhQ3hkSJgnPioA-out-0.jpg"  
 st.image(image_url, caption="Conscious Cart AI", use_container_width=True)
 # --- Session State Initialization ---
 if "api_key" not in st.session_state:
